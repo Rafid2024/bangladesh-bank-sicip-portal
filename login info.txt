@@ -1,0 +1,100 @@
+================================================================================
+        BANGLADESH BANK SICIP PORTAL - LOGIN & SYSTEM INFORMATION
+================================================================================
+Generated Date & Time: 2026-11-08 02:52:00 (Asia/Dhaka)
+Project Name: Bangladesh Bank SICIP Enterprise Portal
+Local Project Path: C:\Users\USER\.gemini\antigravity\scratch\modern-portal-app
+GitHub Repository: https://github.com/Rafid2024/bangladesh-bank-sicip-portal
+Live Cloud URL (Render): https://sicip-portal.onrender.com
+Render Dashboard: https://dashboard.render.com/web/srv-dbnoa167bikc73d3qh40
+Render Service ID: srv-dbnoa167bikc73d3qh40
+
+--------------------------------------------------------------------------------
+1. লাইভ পোর্টাল ও ড্যাশবোর্ড লিংকসমূহ (LIVE WEB LINKS)
+--------------------------------------------------------------------------------
+- লাইভ ওয়েবসাইট হোমপেজ:
+  https://sicip-portal.onrender.com
+
+- অফিসিয়াল উদ্যোক্তা আবেদন ফরম (Business Feasibility Report Form):
+  https://sicip-portal.onrender.com/sicip/feasibility-report
+
+- সেন্ট্রাল অ্যাডমিন লগইন পেজ (Permanent Clean White Theme):
+  https://sicip-portal.onrender.com/login
+
+- উদ্যোক্তা / আবেদনকারী লগইন পেজ:
+  https://sicip-portal.onrender.com/sicip/login
+
+- নতুন উদ্যোক্তা রেজিস্ট্রেশন পেজ:
+  https://sicip-portal.onrender.com/sicip/register
+
+- সেন্ট্রাল অ্যাডমিন ড্যাশবোর্ড:
+  https://sicip-portal.onrender.com/dashboard
+
+- আবেদনসমূহ যাচাই ও স্ক্রুটিনি ড্যাশবোর্ড (SICIP Scrutiny Dashboard):
+  https://sicip-portal.onrender.com/sicip/reports
+
+- ইউজার ও পারমিশন গভর্নেন্স ড্যাশবোর্ড:
+  https://sicip-portal.onrender.com/admin/users
+
+- পূরণকৃত নমুনা ফরম প্রিভিউ (Sample Demo PDF):
+  https://sicip-portal.onrender.com/sicip/sample-demo-pdf
+
+--------------------------------------------------------------------------------
+2. সেন্ট্রাল অ্যাডমিন ও স্টাফ লগইন তথ্য (CENTRAL ADMIN CREDENTIALS)
+--------------------------------------------------------------------------------
+
+[ একাউন্ট ১ - সুপার অ্যাডমিনিস্ট্রেটর (Super Administrator) ]
+- রোল: Super Administrator (Full Governance & RBAC)
+- ইমেইল: admin@novaportal.io
+- পাসওয়ার্ড: password123
+- মোবাইল নম্বর: +1-555-0199
+- মোবাইল ওটিপি কোড (Demo 2FA OTP): 123456
+- ১-ক্লিক তাৎক্ষণিক লগইন লিংক (No typing required):
+  https://sicip-portal.onrender.com/auth/quick/super_admin
+
+[ একাউন্ট ২ - অপারেশনস ম্যানেজার (Operations Manager) ]
+- রোল: Operations Manager (Workflow & Approvals)
+- ইমেইল: manager@novaportal.io
+- পাসওয়ার্ড: password123
+- মোবাইল নম্বর: +1-555-0142
+- মোবাইল ওটিপি কোড (Demo 2FA OTP): 123456
+- ১-ক্লিক তাৎক্ষণিক লগইন লিংক:
+  https://sicip-portal.onrender.com/auth/quick/operations_manager
+
+[ একাউন্ট ৩ - ক্লায়েন্ট / সাধারণ ইউজার (Client User) ]
+- রোল: Client / Portal User (Self-Service & Intake)
+- ইমেইল: client@novaportal.io
+- পাসওয়ার্ড: password123
+- মোবাইল নম্বর: +1-555-0188
+- মোবাইল ওটিপি কোড (Demo 2FA OTP): 123456
+- ১-ক্লিক তাৎক্ষণিক লগইন লিংক:
+  https://sicip-portal.onrender.com/auth/quick/client_user
+
+--------------------------------------------------------------------------------
+3. সিসিপ ডেমো উদ্যোক্তা আবেদন তথ্য (SAMPLE APPLICANT DEMO)
+--------------------------------------------------------------------------------
+- আবেদনকারীর নাম: তানভীর আহমেদ চৌধুরী (Tanvir Ahmed Chowdhury)
+- ট্র্যাকিং নম্বর (Tracking Number): SICIP-DEMO-2026
+- মোবাইল নম্বর: 01819876543
+- ইমেইল: tanvir.chowdhury95@gmail.com
+- সরাসরি প্রোফাইল ও রিপোর্ট ভিউ লিংক:
+  https://sicip-portal.onrender.com/sicip/report/SICIP-DEMO-2026
+
+--------------------------------------------------------------------------------
+4. লোকাল ডেভেলপমেন্ট তথ্য (LOCAL DEVELOPMENT)
+--------------------------------------------------------------------------------
+- লোকাল অ্যাপ্লিকেশন URL: http://localhost:8000
+- লোকাল সার্ভার চালুর কমান্ড: php artisan serve
+- লোকাল এসেট বিল্ড কমান্ড: npm.cmd run build
+- অটোমেটেড টেস্ট রান কমান্ড: php artisan test
+- টেস্ট রেজাল্ট: 44 Tests Passed, 272 Assertions
+
+--------------------------------------------------------------------------------
+5. সিস্টেম ও সিকিউরিটি কনফিগারেশন (SYSTEM SPECIFICATIONS)
+--------------------------------------------------------------------------------
+- ফ্রেমওয়ার্ক: Laravel 12 (PHP 8.3 FPM) + Inertia.js (React 19) + Tailwind CSS v4
+- ডাটাবেস: SQLite (Automated Production Migrations & Seeds)
+- ক্লাউড হোস্টিং: Render.com Cloud Platform (Docker Containerized)
+- সিকিউরিটি: HTTPS / SSL Forced Scheme, Reverse Proxy Trusted, CSRF & 2FA Protection
+- লোগো: বাংলাদেশ ব্যাংক (Bangladesh Bank) ও সিসিপ (SICIP) অফিসিয়াল লোগো ইন্টিগ্রেটেড
+================================================================================
