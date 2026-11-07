@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@source "../views/**/*.blade.php";
+@source "../js/**/*.{jsx,tsx,js}";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-sans: 'Noto Sans Bengali', 'SolaimanLipi', 'Kalpurush', 'Hind Siliguri', 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-bengali: 'Noto Sans Bengali', 'SolaimanLipi', 'Kalpurush', 'Hind Siliguri', sans-serif;
+    --color-canvas: #18181B;
+    --color-canvas-card: #27272A;
+    --color-accent: #6366F1;
+    --color-accent-hover: #4F46E5;
+    --color-primary-text: #F4F4F5;
+}
+
+/* Bengali typography fixes: Prevent ligature breakage and improve numeral rendering */
+.font-bengali,
+[lang="bn"] {
+    font-family: 'Noto Sans Bengali', 'SolaimanLipi', 'Kalpurush', 'Hind Siliguri', sans-serif;
+    letter-spacing: normal !important;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1, "liga" 1;
+}
+
+/* Ensure Bengali digits are clean and unmistakable */
+.bn-num,
+.bn-digits {
+    font-family: 'Noto Sans Bengali', 'Kalpurush', sans-serif;
+    font-variant-numeric: normal;
+    letter-spacing: normal !important;
+    display: inline-block;
+}
+
+@media print {
+    body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+    }
+    .no-print {
+        display: none !important;
+    }
+    .page-break {
+        page-break-after: always !important;
+        break-after: page !important;
+    }
+    .print-sheet {
+        box-shadow: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        border: none !important;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(113, 113, 122, 0.4);
+    border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(113, 113, 122, 0.7);
+}
+
+/* Bento Tactile Hover Lift & Shadows */
+.bento-tile {
+    background: #1f1f23;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.bento-tile:hover {
+    border-color: rgba(99, 102, 241, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.6), 0 0 15px -3px rgba(99, 102, 241, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Shimmer Animation for Skeleton State */
+@keyframes shimmer {
+    100% {
+        transform: translateX(100%);
+    }
+}
+.shimmer-animation {
+    position: relative;
+    overflow: hidden;
+}
+.shimmer-animation::after {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0,
+        rgba(255, 255, 255, 0.05) 20%,
+        rgba(255, 255, 255, 0.1) 60%,
+        rgba(255, 255, 255, 0)
+    );
+    animation: shimmer 1.8s infinite;
+    content: '';
+}
