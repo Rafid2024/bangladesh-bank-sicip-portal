@@ -29,15 +29,10 @@ echo "Running database migrations..."
 php artisan migrate --force
 
 # Seed database if users table is empty
-php artisan db:seed --force
+php artisan db:seed --force || true
 
 # Link storage
 php artisan storage:link || true
 
-# Optimize cache
-php artisan config:cache
-php artisan route:cache
-php artisan view:cache
-
-echo "Configuration cached successfully. Launching Nginx and PHP-FPM via Supervisord..."
+echo "Launching Nginx and PHP-FPM via Supervisord..."
 exec /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf

@@ -3,24 +3,23 @@ FROM node:20-alpine AS frontend
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm ci
+RUN npm install
 
 COPY . .
 RUN npm run build
 
-# Stage 2: Production PHP-FPM + Nginx Environment
-FROM php:8.2-fpm-alpine
+# Stage 2: Production PHP 8.3 + Nginx Environment
+FROM php:8.3-fpm-alpine
 
-# Install system utilities, SQLite & required PHP extension packages
+# Install system utilities & libraries
 RUN apk add --no-cache \
     nginx \
     sqlite \
-    sqlite-dev \
     libpng-dev \
     libjpeg-turbo-dev \
     freetype-dev \
-    zip \
     libzip-dev \
+    zip \
     unzip \
     curl \
     supervisor \
@@ -28,7 +27,7 @@ RUN apk add --no-cache \
 
 # Configure and install PHP extensions
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install pdo pdo_sqlite gd zip pcntl bcmath
+    && docker-php-ext-install gd zip pcntl bcmath
 
 # Copy Composer binary
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
