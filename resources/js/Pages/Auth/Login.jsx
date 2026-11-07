@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { Head, useForm, router, usePage } from '@inertiajs/react';
 import { Shield, Sparkles, Phone, Mail, ArrowRight, Lock, CheckCircle, KeyRound, Eye, EyeOff, ShieldCheck, ArrowLeft } from 'lucide-react';
-import Input from '../../Components/Common/Input';
-import Button from '../../Components/Common/Button';
-import Badge from '../../Components/Common/Badge';
 
 export default function Login({ demoAccounts = [] }) {
     const { settings = {} } = usePage().props;
@@ -80,16 +77,15 @@ export default function Login({ demoAccounts = [] }) {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-950 via-emerald-950/90 to-slate-950 text-slate-100 flex flex-col justify-center py-8 sm:py-12 px-4 sm:px-6 lg:px-8 selection:bg-emerald-600 selection:text-white font-sans relative overflow-hidden">
+        <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col justify-center py-8 sm:py-12 px-4 sm:px-6 lg:px-8 font-sans relative selection:bg-emerald-600 selection:text-white">
             <Head title="অ্যাডমিন ও স্ক্রুটিনি লগইন - বাংলাদেশ ব্যাংক SICIP" />
 
-            {/* Glowing Background Radial Accents */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-emerald-500/10 blur-[130px] pointer-events-none rounded-full"></div>
-            <div className="absolute bottom-0 right-10 w-[500px] h-[300px] bg-teal-500/10 blur-[120px] pointer-events-none rounded-full"></div>
+            {/* Subtle soft backdrop accent */}
+            <div className="absolute top-0 inset-x-0 h-96 bg-gradient-to-b from-emerald-100/60 via-slate-50/40 to-transparent pointer-events-none"></div>
 
             <div className="sm:mx-auto sm:w-full sm:max-w-xl text-center mb-6 relative z-10">
                 {/* 2 Official Logos in Crisp White Container */}
-                <div className="inline-flex items-center justify-center gap-4 bg-white px-5 py-2.5 rounded-2xl shadow-2xl shadow-emerald-950/60 border border-emerald-400/40 mb-3">
+                <div className="inline-flex items-center justify-center gap-4 bg-white px-5 py-2.5 rounded-2xl shadow-md border border-slate-200/90 mb-3">
                     <div className="flex items-center justify-center" title="বাংলাদেশ ব্যাংক">
                         <img
                             src={settings?.bb_logo || '/uploads/logos/bb_1793994378_UqTbAw.svg'}
@@ -97,7 +93,7 @@ export default function Login({ demoAccounts = [] }) {
                             className="h-12 w-12 object-contain"
                         />
                     </div>
-                    <div className="h-8 w-px bg-slate-300"></div>
+                    <div className="h-8 w-px bg-slate-200"></div>
                     <div className="flex items-center justify-center" title="SICIP">
                         <img
                             src={settings?.sicip_logo || '/uploads/logos/sicip_1793994378_6ZWj0e.png'}
@@ -108,17 +104,17 @@ export default function Login({ demoAccounts = [] }) {
                 </div>
 
                 <div className="flex items-center justify-center gap-2 mb-2">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs font-semibold">
-                        <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-800 text-xs font-semibold">
+                        <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
                         <span>অফিসিয়াল অ্যাডমিন ও মূল্যায়ন পোর্টাল</span>
                     </span>
-                    <span className="text-xs text-amber-400 font-medium hidden sm:inline">• বাংলাদেশ ব্যাংক PIU</span>
+                    <span className="text-xs text-amber-700 font-medium hidden sm:inline">• বাংলাদেশ ব্যাংক PIU</span>
                 </div>
 
-                <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-white">
+                <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-slate-900">
                     অ্যাডমিন ড্যাশবোর্ড লগইন
                 </h1>
-                <p className="text-xs sm:text-sm text-slate-300 mt-1 font-medium">
+                <p className="text-xs sm:text-sm text-slate-600 mt-1 font-medium">
                     Skills for Industry Competitiveness and Innovation Program (SICIP)
                 </p>
             </div>
@@ -128,32 +124,32 @@ export default function Login({ demoAccounts = [] }) {
                 <div className="mb-3 flex items-center justify-between text-xs px-1">
                     <a 
                         href="/sicip/feasibility-report" 
-                        className="text-emerald-400 hover:text-emerald-300 font-semibold inline-flex items-center gap-1.5 transition"
+                        className="text-emerald-700 hover:text-emerald-800 font-semibold inline-flex items-center gap-1.5 transition"
                     >
                         <ArrowLeft className="w-3.5 h-3.5" />
                         <span>উদ্যোক্তা আবেদন ফরম</span>
                     </a>
-                    <span className="text-slate-400 text-[11px] flex items-center gap-1">
-                        <Lock className="w-3 h-3 text-amber-400" />
+                    <span className="text-slate-500 text-[11px] flex items-center gap-1">
+                        <Lock className="w-3 h-3 text-amber-600" />
                         নিরাপদ ২-ফ্যাক্টর গেটওয়ে
                     </span>
                 </div>
 
-                {/* Main Auth Glass Card */}
-                <div className="rounded-3xl p-6 sm:p-8 bg-slate-900/85 backdrop-blur-xl border border-emerald-500/25 shadow-2xl shadow-emerald-950/70">
+                {/* Main Auth White Card */}
+                <div className="rounded-3xl p-6 sm:p-8 bg-white border border-slate-200 shadow-xl shadow-slate-200/70">
                     
                     {/* Mode Toggle Tabs */}
-                    <div className="grid grid-cols-2 p-1 rounded-2xl bg-slate-950/80 border border-slate-800 mb-6">
+                    <div className="grid grid-cols-2 p-1 rounded-2xl bg-slate-100 border border-slate-200 mb-6">
                         <button
                             type="button"
                             onClick={() => setAuthMode('credentials')}
                             className={`py-2.5 text-xs font-bold rounded-xl transition flex items-center justify-center gap-2 cursor-pointer ${
                                 authMode === 'credentials'
-                                    ? 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-lg shadow-emerald-600/30'
-                                    : 'text-slate-400 hover:text-white'
+                                    ? 'bg-white text-emerald-800 shadow-sm'
+                                    : 'text-slate-600 hover:text-slate-900'
                             }`}
                         >
-                            <Mail className="w-4 h-4" />
+                            <Mail className="w-4 h-4 text-emerald-600" />
                             ইমেইল ও পাসওয়ার্ড
                         </button>
                         <button
@@ -161,11 +157,11 @@ export default function Login({ demoAccounts = [] }) {
                             onClick={() => setAuthMode('phone_otp')}
                             className={`py-2.5 text-xs font-bold rounded-xl transition flex items-center justify-center gap-2 cursor-pointer ${
                                 authMode === 'phone_otp'
-                                    ? 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-lg shadow-emerald-600/30'
-                                    : 'text-slate-400 hover:text-white'
+                                    ? 'bg-white text-emerald-800 shadow-sm'
+                                    : 'text-slate-600 hover:text-slate-900'
                             }`}
                         >
-                            <Phone className="w-4 h-4" />
+                            <Phone className="w-4 h-4 text-emerald-600" />
                             মোবাইল ওটিপি (2FA)
                         </button>
                     </div>
@@ -174,7 +170,7 @@ export default function Login({ demoAccounts = [] }) {
                     {authMode === 'credentials' && (
                         <form onSubmit={handleSubmit} className="space-y-4">
                             <div>
-                                <label className="block text-xs font-bold text-slate-200 mb-1.5">
+                                <label className="block text-xs font-bold text-slate-700 mb-1.5">
                                     অ্যাডমিন ইমেইল ঠিকানা (Official Email)
                                 </label>
                                 <div className="relative">
@@ -187,16 +183,16 @@ export default function Login({ demoAccounts = [] }) {
                                         onChange={(e) => setData('email', e.target.value)}
                                         placeholder="admin@novaportal.io"
                                         required
-                                        className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-950/70 border border-slate-700 text-slate-100 placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition"
+                                        className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition"
                                     />
                                 </div>
                                 {errors.email && (
-                                    <p className="text-xs text-rose-400 mt-1 font-medium">{errors.email}</p>
+                                    <p className="text-xs text-rose-600 mt-1 font-medium">{errors.email}</p>
                                 )}
                             </div>
 
                             <div>
-                                <label className="block text-xs font-bold text-slate-200 mb-1.5">
+                                <label className="block text-xs font-bold text-slate-700 mb-1.5">
                                     গোপন পাসওয়ার্ড (Password)
                                 </label>
                                 <div className="relative">
@@ -209,32 +205,32 @@ export default function Login({ demoAccounts = [] }) {
                                         onChange={(e) => setData('password', e.target.value)}
                                         placeholder="••••••••••••"
                                         required
-                                        className="w-full pl-10 pr-10 py-2.5 rounded-xl bg-slate-950/70 border border-slate-700 text-slate-100 placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition"
+                                        className="w-full pl-10 pr-10 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition"
                                     />
                                     <button
                                         type="button"
                                         onClick={() => setShowPassword(!showPassword)}
-                                        className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-slate-200 cursor-pointer"
+                                        className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-slate-600 cursor-pointer"
                                     >
                                         {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                                     </button>
                                 </div>
                                 {errors.password && (
-                                    <p className="text-xs text-rose-400 mt-1 font-medium">{errors.password}</p>
+                                    <p className="text-xs text-rose-600 mt-1 font-medium">{errors.password}</p>
                                 )}
                             </div>
 
-                            <div className="flex items-center justify-between text-xs text-slate-400 pt-1">
+                            <div className="flex items-center justify-between text-xs text-slate-600 pt-1">
                                 <label className="flex items-center gap-2 cursor-pointer">
                                     <input
                                         type="checkbox"
                                         checked={data.remember}
                                         onChange={(e) => setData('remember', e.target.checked)}
-                                        className="rounded border-slate-700 bg-slate-950 text-emerald-600 focus:ring-emerald-500 cursor-pointer"
+                                        className="rounded border-slate-300 text-emerald-600 focus:ring-emerald-500 cursor-pointer"
                                     />
-                                    <span className="font-medium text-slate-300">লগইন সেশন মনে রাখুন</span>
+                                    <span className="font-medium text-slate-700">লগইন সেশন মনে রাখুন</span>
                                 </label>
-                                <span className="text-emerald-400 hover:text-emerald-300 font-semibold cursor-pointer">
+                                <span className="text-emerald-700 hover:text-emerald-800 font-semibold cursor-pointer">
                                     পাসওয়ার্ড ভুলে গেছেন?
                                 </span>
                             </div>
@@ -242,7 +238,7 @@ export default function Login({ demoAccounts = [] }) {
                             <button
                                 type="submit"
                                 disabled={processing}
-                                className="w-full mt-2 py-3 px-4 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-600 hover:from-emerald-500 hover:to-teal-500 shadow-lg shadow-emerald-600/30 active:scale-[0.99] transition cursor-pointer flex items-center justify-center gap-2 disabled:opacity-60"
+                                className="w-full mt-2 py-3 px-4 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-emerald-600 via-emerald-600 to-teal-700 hover:from-emerald-700 hover:to-teal-800 shadow-md shadow-emerald-700/20 active:scale-[0.99] transition cursor-pointer flex items-center justify-center gap-2 disabled:opacity-60"
                             >
                                 <Lock className="w-4 h-4" />
                                 <span>{processing ? 'প্রবেশ করা হচ্ছে...' : 'অ্যাডমিন ড্যাশবোর্ডে প্রবেশ করুন'}</span>
@@ -257,7 +253,7 @@ export default function Login({ demoAccounts = [] }) {
                             {otpStep === 'phone' ? (
                                 <form onSubmit={handleSendOtp} className="space-y-4">
                                     <div>
-                                        <label className="block text-xs font-bold text-slate-200 mb-1.5">
+                                        <label className="block text-xs font-bold text-slate-700 mb-1.5">
                                             নিবন্ধিত অফিসিয়াল মোবাইল নম্বর
                                         </label>
                                         <div className="relative">
@@ -270,19 +266,19 @@ export default function Login({ demoAccounts = [] }) {
                                                 onChange={(e) => setPhoneData({ ...phoneData, phone: e.target.value })}
                                                 placeholder="+1-555-0199"
                                                 required
-                                                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-950/70 border border-slate-700 text-slate-100 placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 transition"
+                                                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:bg-white focus:ring-2 focus:ring-emerald-500 transition"
                                             />
                                         </div>
                                         {phoneError && (
-                                            <p className="text-xs text-rose-400 mt-1 font-medium">{phoneError}</p>
+                                            <p className="text-xs text-rose-600 mt-1 font-medium">{phoneError}</p>
                                         )}
-                                        <p className="text-[11px] text-slate-400 mt-1">দেশ কোড সহ আন্তর্জাতিক ফরম্যাট (যেমন: +1-555-0199 বা 01819876543)</p>
+                                        <p className="text-[11px] text-slate-500 mt-1">দেশ কোড সহ আন্তর্জাতিক ফরম্যাট (যেমন: +1-555-0199 বা 01819876543)</p>
                                     </div>
 
                                     <button
                                         type="submit"
                                         disabled={otpLoading}
-                                        className="w-full mt-2 py-3 px-4 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 shadow-lg shadow-emerald-600/30 transition cursor-pointer flex items-center justify-center gap-2 disabled:opacity-60"
+                                        className="w-full mt-2 py-3 px-4 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-700 hover:to-teal-800 shadow-md shadow-emerald-700/20 transition cursor-pointer flex items-center justify-center gap-2 disabled:opacity-60"
                                     >
                                         <KeyRound className="w-4 h-4" />
                                         <span>{otpLoading ? 'ওটিপি পাঠানো হচ্ছে...' : '৬ ডিজিটের ওটিপি কোড পাঠান'}</span>
@@ -291,14 +287,14 @@ export default function Login({ demoAccounts = [] }) {
                             ) : (
                                 <form onSubmit={handleVerifyOtp} className="space-y-4">
                                     {otpMessage && (
-                                        <div className="p-3.5 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs flex items-center gap-2 font-medium">
-                                            <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
+                                        <div className="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs flex items-center gap-2 font-medium">
+                                            <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
                                             <span>{otpMessage}</span>
                                         </div>
                                     )}
 
                                     <div>
-                                        <label className="block text-xs font-bold text-slate-200 mb-1.5 text-center">
+                                        <label className="block text-xs font-bold text-slate-700 mb-1.5 text-center">
                                             আপনার মোবাইলে পাঠানো ৬-ডিজিটের কোডটি লিখুন
                                         </label>
                                         <input
@@ -307,7 +303,7 @@ export default function Login({ demoAccounts = [] }) {
                                             value={phoneData.otp}
                                             onChange={(e) => setPhoneData({ ...phoneData, otp: e.target.value })}
                                             placeholder="123456"
-                                            className="w-full py-3 px-4 rounded-xl bg-slate-950/80 border border-slate-700 text-emerald-400 placeholder-slate-600 text-center font-mono tracking-[0.3em] text-2xl font-black focus:outline-none focus:ring-2 focus:ring-emerald-500 transition"
+                                            className="w-full py-3 px-4 rounded-xl bg-slate-50 border border-slate-300 text-emerald-700 placeholder-slate-400 text-center font-mono tracking-[0.3em] text-2xl font-black focus:outline-none focus:bg-white focus:ring-2 focus:ring-emerald-500 transition"
                                             required
                                         />
                                     </div>
@@ -316,13 +312,13 @@ export default function Login({ demoAccounts = [] }) {
                                         <button
                                             type="button"
                                             onClick={() => setOtpStep('phone')}
-                                            className="w-1/3 py-2.5 rounded-xl border border-slate-700 text-slate-300 hover:bg-slate-800 text-xs font-bold transition cursor-pointer"
+                                            className="w-1/3 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 text-xs font-bold transition cursor-pointer"
                                         >
                                             পূর্ববর্তী
                                         </button>
                                         <button
                                             type="submit"
-                                            className="w-2/3 py-2.5 rounded-xl font-bold text-xs text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 shadow-md shadow-emerald-600/30 transition cursor-pointer flex items-center justify-center gap-1.5"
+                                            className="w-2/3 py-2.5 rounded-xl font-bold text-xs text-white bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-700 hover:to-teal-800 shadow-md shadow-emerald-700/20 transition cursor-pointer flex items-center justify-center gap-1.5"
                                         >
                                             <CheckCircle className="w-4 h-4" />
                                             <span>যাচাই করে প্রবেশ করুন</span>
@@ -334,13 +330,13 @@ export default function Login({ demoAccounts = [] }) {
                     )}
 
                     {/* Quick 1-Click Access Roles */}
-                    <div className="mt-8 pt-6 border-t border-slate-800/80">
+                    <div className="mt-8 pt-6 border-t border-slate-200">
                         <div className="flex items-center justify-between mb-3.5">
-                            <span className="text-[11px] font-bold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
-                                <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                            <span className="text-[11px] font-bold text-slate-700 uppercase tracking-wider flex items-center gap-1.5">
+                                <Sparkles className="w-3.5 h-3.5 text-amber-500" />
                                 দ্রুত ১-ক্লিক অ্যাডমিন অ্যাক্সেস (Quick Login)
                             </span>
-                            <span className="text-[10px] text-emerald-400 font-semibold bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+                            <span className="text-[10px] text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
                                 নো পাসওয়ার্ড দরকার
                             </span>
                         </div>
@@ -351,27 +347,27 @@ export default function Login({ demoAccounts = [] }) {
                                     key={acc.email}
                                     type="button"
                                     onClick={() => handleQuickLogin(acc.role)}
-                                    className="p-3.5 rounded-2xl bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-emerald-500/50 text-left transition flex items-center justify-between group cursor-pointer shadow-sm"
+                                    className="p-3.5 rounded-2xl bg-slate-50 hover:bg-emerald-50/50 border border-slate-200 hover:border-emerald-300 text-left transition flex items-center justify-between group cursor-pointer shadow-sm"
                                 >
                                     <div className="flex items-center gap-3">
                                         <img
                                             src={acc.avatar}
                                             alt={acc.role}
-                                            className="w-10 h-10 rounded-full object-cover border-2 border-slate-700 group-hover:border-emerald-400 transition"
+                                            className="w-10 h-10 rounded-full object-cover border-2 border-slate-200 group-hover:border-emerald-400 transition"
                                         />
                                         <div>
                                             <div className="flex items-center gap-2">
-                                                <h4 className="text-xs font-bold text-slate-100 group-hover:text-emerald-300 transition">
+                                                <h4 className="text-xs font-bold text-slate-800 group-hover:text-emerald-800 transition">
                                                     {acc.role}
                                                 </h4>
-                                                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                                                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200">
                                                     {acc.badge}
                                                 </span>
                                             </div>
-                                            <p className="text-[11px] text-slate-400 mt-0.5">{acc.email}</p>
+                                            <p className="text-[11px] text-slate-500 mt-0.5">{acc.email}</p>
                                         </div>
                                     </div>
-                                    <div className="w-8 h-8 rounded-xl bg-slate-800/80 group-hover:bg-emerald-600 flex items-center justify-center text-slate-400 group-hover:text-white transition">
+                                    <div className="w-8 h-8 rounded-xl bg-white border border-slate-200 group-hover:bg-emerald-600 group-hover:border-emerald-600 flex items-center justify-center text-slate-500 group-hover:text-white transition shadow-xs">
                                         <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition" />
                                     </div>
                                 </button>
@@ -381,9 +377,9 @@ export default function Login({ demoAccounts = [] }) {
                 </div>
 
                 {/* Footer Official Security Info */}
-                <div className="mt-6 text-center text-xs text-slate-400">
+                <div className="mt-6 text-center text-xs text-slate-500">
                     <p className="flex items-center justify-center gap-1.5">
-                        <Shield className="w-3.5 h-3.5 text-emerald-400" />
+                        <Shield className="w-3.5 h-3.5 text-emerald-600" />
                         <span>বাংলাদেশ ব্যাংক ও অর্থ মন্ত্রণালয় (PIU) নিয়ন্ত্রিত এনক্রিপ্টেড প্রশাসনিক পোর্টাল</span>
                     </p>
                 </div>
