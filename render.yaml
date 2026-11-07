@@ -26,3 +26,4 @@ services:
         value: sync
       - key: CACHE_STORE
         value: database
+
