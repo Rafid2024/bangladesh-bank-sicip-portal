@@ -1,58 +1,66 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# বাংলাদেশ ব্যাংক ও অর্থ মন্ত্রণালয় — SICIP উদ্যোক্তা আবেদন পোর্টাল
+### Skills for Industry Competitiveness and Innovation Program (SICIP)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Rafid2024/bangladesh-bank-sicip-portal)
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📌 প্রজেক্ট পরিচিতি (Overview)
+গণপ্রজাতন্ত্রী বাংলাদেশ সরকারের অর্থ মন্ত্রণালয় ও এশীয় উন্নয়ন ব্যাংক (ADB) সহায়তাপুষ্ট এবং বাংলাদেশ ব্যাংক কর্তৃক পরিচালিত **Skills for Industry Competitiveness and Innovation Program (SICIP)**-এর উদ্যোক্তা উন্নয়ন ও অর্থায়ন কর্মসূচির জন্য ব্যবসায় সম্ভাব্যতা যাচাই প্রতিবেদন (Business Feasibility Report) গ্রহণ, যাচাই ও মূল্যায়নের একটি স্বয়ংসম্পূর্ণ ওয়েব অ্যাপ্লিকেশন।
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 🚀 ১-ক্লিকে Render.com-এ লাইভ ডিপ্লয় করুন:
+উপরে থাকা **`Deploy to Render`** বাটনে ক্লিক করুন অথবা নিচের লিংকে যান:
+👉 **[https://render.com/deploy?repo=https://github.com/Rafid2024/bangladesh-bank-sicip-portal](https://render.com/deploy?repo=https://github.com/Rafid2024/bangladesh-bank-sicip-portal)**
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Render স্বয়ংক্রিয়ভাবে আমাদের তৈরিকৃত `Dockerfile` ও `render.yaml` ব্লুপ্রিন্ট পড়ে ক্লাউডে পুরো প্রজেক্ট লাইভ করে দেবে!
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## ✨ প্রধান ফিচারসমূহ (Key Features)
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. **উদ্যোক্তা অ্যাকাউন্ট ও লগইন সিস্টেম:**
+   - ১১ ডিজিটের মোবাইল নম্বর অথবা ইমেইল দিয়ে নিরাপদ রেজিস্ট্রেশন ও লগইন।
+   - সম্পূর্ণ আলাদা আবেদনকারী পোর্টাল।
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+2. **ব্যবসায়ের সম্ভাব্যতা যাচাই প্রতিবেদন ফরম (৪ পাতা):**
+   - **পার্ট-১:** উদ্যোক্তার ব্যক্তিগত তথ্যাবলী, স্থায়ী ও বর্তমান ঠিকানা, শিক্ষাগত যোগ্যতা, প্রশিক্ষণ ও অভিজ্ঞতা।
+   - **পার্ট-২:** প্রস্তাবিত ব্যবসা ও ব্যবসায়িক পরিকল্পনা, পণ্য বা সেবার বিবরণ, কাঁচামালের উৎস, সম্ভাব্য ক্রেতা ও প্রতিযোগী বিশ্লেষণ।
+   - **পার্ট-৩:** আর্থিক প্রাক্কলন ও আয়-ব্যয় বিশ্লেষণ, আনুমানিক দৈনিক/মাসিক বিক্রয়, প্রাক্কলিত মাসিক লাভ।
+   - **পার্ট-৪:** পারিবারিক আর্থিক অবস্থা, পূর্বের অভিজ্ঞতা, ব্যাংক তথ্য এবং প্রয়োজনীয় সংযুক্তি (ছবি, স্বাক্ষর, এনআইডি ও ট্রেড লাইসেন্স)।
 
-## Agentic Development
+3. **স্বয়ংক্রিয় রিয়েল-টাইম তারিখ (Live Date):**
+   - সার্ভার-সাইড ভ্যালিডেশনের মাধ্যমে প্রতিবেদন দাখিলের তারিখ ও স্বাক্ষরের তারিখ স্বয়ংক্রিয়ভাবে আজকের তারিখ নির্ধারণ হয়।
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+4. **খসড়া (Save Draft) ও স্বয়ংক্রিয় রিলোড:**
+   - অসম্পূর্ণ তথ্য থাকলে খসড়া হিসেবে সংরক্ষণ করা যায় এবং পুনরায় লগইন করলে স্বয়ংক্রিয়ভাবে লোড হয়।
 
-```bash
-composer require laravel/boost --dev
+5. **নিশ্ছিদ্র ডেটা গোপনীয়তা (Data Privacy & Isolation):**
+   - কোনো সাধারণ আবেদনকারী অন্য কারো আবেদন বা আবেদনকারীদের তালিকা দেখতে পারবে না (কড়া `403 Forbidden` প্রতিরোধ)।
 
-php artisan boost:install
-```
+6. **অফিসিয়াল বাংলাদেশ ব্যাংক ও SICIP লোগো:**
+   - বাংলাদেশ ব্যাংকের আসল ভেক্টর ক্রেস্ট এবং SICIP প্রোগ্রামের কালারফুল অফিশিয়াল লোগো সমন্বিত।
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+7. **অ্যাডমিন স্ক্রুটিনি ও মূল্যায়ন কনসোল:**
+   - আবেদনকারীদের তালিকা, ফিল্টারিং (বিভাগ, খাত, স্ট্যাটাস), পরিসংখ্যান গ্রিড।
+   - আবেদনকারী স্ক্রুটিনি প্রোফাইল, ডকুমেন্ট যাচাই এবং স্ট্যাটাস (`Approved`, `Under Review`, `Rejected`) পরিবর্তন ও ইন্টারনাল নোট সেভ।
 
-## Contributing
+8. **মোবাইল ও ফোন অপ্টিমাইজড ভিউ:**
+   - মোবাইল স্ক্রিনে স্বয়ংক্রিয় টাচ-ফ্রেন্ডলি কার্ড ভিউ ও সরাসরি কল করার বোতাম।
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 🔑 ডিফল্ট অ্যাডমিন ক্রেডেনশিয়ালস (Default Admin Credentials)
+- **লগইন ইউআরএল:** `/login`
+- **ইমেইল:** `admin@novaportal.io`
+- **পাসওয়ার্ড:** `password123`
+- **১-ক্লিক কুইক লগইন:** `/auth/quick/super_admin`
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🛠️ প্রযুক্তিগত স্ট্যাক (Tech Stack)
+- **ব্যাকএন্ড:** Laravel 12 / 13 (PHP 8.2+)
+- **ফ্রন্টএন্ড:** React 19 + Inertia.js
+- **স্টাইলিং:** Tailwind CSS
+- **ডাটাবেজ:** SQLite (Zero-Config Portable)
+- **কনটেইনারাইজেশন:** Docker + Nginx + Supervisord
+- **টেস্টিং স্যুট:** PHPUnit (৪৪টি এন্ড-টু-এন্ড টেস্ট, ২৭২টি অ্যাসার্শন)
