@@ -1,0 +1,10 @@
+/node_modules
+/vendor
+.git
+.github
+.env
+.env.*
+storage/logs/*.log
+database/*.sqlite
+database/*.sqlite-journal
+tests
